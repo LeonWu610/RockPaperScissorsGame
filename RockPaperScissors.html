@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>RockPaperScissors</title>
+    <link rel="stylesheet" href="RockPaperScissors.css">
+</head>
+
+<body>
+    <header>Rock Paper Scissors</header>
+    <div class="play-grid">
+        <div class="gesture js-rock"
+            onclick="play('rock');">✊</div>
+        <div class="gesture js-paper"
+            onclick="play('paper');">✋</div>
+        <div class="gesture js-scissors"
+            onclick="play('scissors');">✌️</div>
+    </div>
+
+    <div class="result js-result"></div>
+    <div class="js-statistics"></div>
+    
+    <button onclick="score.wins = 0;
+        score.losses = 0;
+        score.ties = 0;
+        localStorage.removeItem('score');
+        updateScore();
+        ">Reset Score</button>
+    <button onclick="autoPlay();">Auto Play</button>
+</body>
+
+<script src="RockPaperScissors.js"></script>
+
+</html>
